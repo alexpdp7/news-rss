@@ -1,3 +1,4 @@
+import collections
 import csv
 import datetime
 import pathlib
@@ -77,3 +78,21 @@ def download_models(config):
     for language in df["section_language"]:
         model = config["spacy"]["models"][language]
         spacy.cli.download(model)
+
+
+def shown_ner(config):
+    ner = collections.Counter()
+    labels = set()
+    chdb = get_session(config)
+    df = chdb.query(
+        "select distinct section_language, title from news.google_news_v1", "dataframe"
+    )
+    models = {}
+    for _, row in df.iterrows():
+        language = row["section_language"]
+        if not language in models:
+            models[language] = spacy.load(config["spacy"]["models"][language])
+        doc = models[language](row["title"])
+        labels = labels.union([e.label_ for e in doc.ents])
+        ner.update([e.text for e in doc.ents])
+    print(ner.most_common(100))

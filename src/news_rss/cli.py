@@ -24,6 +24,13 @@ def main():
 
     subparser.set_defaults(func=download_models)
 
+    subparser = subparsers.add_parser("show_ner")
+
+    def show_ner(_args):
+        news_rss.shown_ner(config)
+
+    subparser.set_defaults(func=show_ner)
+
     args = parser.parse_args()
 
     config = news_rss.load_config(args.config)
