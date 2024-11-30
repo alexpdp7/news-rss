@@ -25,5 +25,5 @@ google_news = [
 ]
 
 [spacy.models]
-"es" = "es_dep_news_trf"
+"es" = "es_core_news_lg"
 "en-US" = "en_core_web_trf"
