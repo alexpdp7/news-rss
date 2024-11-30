@@ -4,6 +4,7 @@ import datetime
 import pathlib
 import tempfile
 import tomllib
+import tqdm
 import uuid
 
 from chdb import session
@@ -88,7 +89,7 @@ def shown_ner(config):
         "select distinct section_language, title from news.google_news_v1", "dataframe"
     )
     models = {}
-    for _, row in df.iterrows():
+    for _, row in tqdm.tqdm(df.iterrows(), total=len(df)):
         language = row["section_language"]
         if not language in models:
             models[language] = spacy.load(config["spacy"]["models"][language])

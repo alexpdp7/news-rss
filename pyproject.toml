@@ -16,6 +16,7 @@ dependencies = [
     "pyarrow>=18.1.0",
     "rss-parser>=2.1.0",
     "spacy>=3.8.2",
+    "tqdm>=4.67.1",
 ]
 
 [project.scripts]

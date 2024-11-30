@@ -449,6 +449,7 @@ dependencies = [
     { name = "pyarrow" },
     { name = "rss-parser" },
     { name = "spacy" },
+    { name = "tqdm" },
 ]
 
 [package.dev-dependencies]
@@ -466,6 +467,7 @@ requires-dist = [
     { name = "pyarrow", specifier = ">=18.1.0" },
     { name = "rss-parser", specifier = ">=2.1.0" },
     { name = "spacy", specifier = ">=3.8.2" },
+    { name = "tqdm", specifier = ">=4.67.1" },
 ]
 
 [package.metadata.requires-dev]
