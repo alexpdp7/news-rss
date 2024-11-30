@@ -6,6 +6,7 @@ import tomllib
 import uuid
 
 from chdb import session
+import spacy
 
 from news_rss import google
 
@@ -66,3 +67,13 @@ def scrape_google_news(google_news_urls):
                     piece.google_news_url,
                     int(ts.timestamp()),
                 )
+
+
+def download_models(config):
+    chdb = get_session(config)
+    df = chdb.query(
+        "select distinct section_language from news.google_news_v1", "dataframe"
+    )
+    for language in df["section_language"]:
+        model = config["spacy"]["models"][language]
+        spacy.cli.download(model)

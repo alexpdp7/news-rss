@@ -24,3 +24,6 @@ google_news = [
   "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNR3QwTlRFU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen",
 ]
 
+[spacy.models]
+"es" = "es_dep_news_trf"
+"en-US" = "en_core_web_trf"

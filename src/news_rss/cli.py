@@ -17,6 +17,13 @@ def main():
 
     subparser.set_defaults(func=scrape)
 
+    subparser = subparsers.add_parser("download_models")
+
+    def download_models(_args):
+        news_rss.download_models(config)
+
+    subparser.set_defaults(func=download_models)
+
     args = parser.parse_args()
 
     config = news_rss.load_config(args.config)
