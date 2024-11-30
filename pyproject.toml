@@ -9,9 +9,13 @@ authors = [
 requires-python = ">=3.11"
 dependencies = [
     "beautifulsoup4>=4.12.3",
+    "chdb>=2.1.1",
     "httpx>=0.27.2",
     "rss-parser>=2.1.0",
 ]
+
+[project.scripts]
+news-rss = "news_rss.cli:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -21,3 +25,4 @@ build-backend = "hatchling.build"
 dev = [
     "ruff>=0.8.0",
 ]
+

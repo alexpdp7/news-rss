@@ -45,6 +45,21 @@ wheels = [
 ]
 
 [[package]]
+name = "chdb"
+version = "2.1.1"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4f/56/354ac78b7411a9a56ad4c0855cfaa6a2747a555e224a7cd2647f5147b839/chdb-2.1.1-cp311-cp311-macosx_10_15_x86_64.whl", hash = "sha256:e9e44db9fc6e07987192470eff742727e7ff71c9ed4a5c18244b1ca55cee52b7", size = 102541278 },
+    { url = "https://files.pythonhosted.org/packages/27/d0/a5473d7d1a04d211e1cd712beea00ff50fa5d6b57b6a74d11356cc6907db/chdb-2.1.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:e75a3c68d6e8e3282b3a234ff509b44f3da9130946de5630eebc4c89c60ed919", size = 78061653 },
+    { url = "https://files.pythonhosted.org/packages/be/d5/8e3b84c66abd5605f28333ffd5d85b7eab5fd80debf2f90462d803da7fc0/chdb-2.1.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ea6add429ce0d253dbe50a243ffd68837d547f0b1450e06368348a6fb9351432", size = 113779633 },
+    { url = "https://files.pythonhosted.org/packages/8b/af/fd2e1987c0d3116b529720396cee5dd3f47c9254dd514ff958a138c5e0d3/chdb-2.1.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d904cfd5d7eda5c6833c1b49929cf897dcd2eba3fc1be6fb1bb7018ff87a77fa", size = 140681956 },
+    { url = "https://files.pythonhosted.org/packages/57/83/9acfdc20b8b9bb9dc7612b2100e29411f8f72375d4a85b0f225360094b61/chdb-2.1.1-cp312-cp312-macosx_10_15_x86_64.whl", hash = "sha256:752b4ddc8c9e0f4c8bb7640befc5aa74ae26360db726ca0f5491f9ab6af84aaa", size = 102541429 },
+    { url = "https://files.pythonhosted.org/packages/ed/23/37bfa75ab34575b359cb785fea7bf7b0f1a6663db165317f0800c9c9d7b5/chdb-2.1.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:d48906d62ac2371642bbcc083e20c55e4cb1c343cc1c7ea86302266feacd0e25", size = 78063692 },
+    { url = "https://files.pythonhosted.org/packages/6c/bb/c202561fcd0e968f044f94fd28b526f1dc439634c902b961a45c6721f4a5/chdb-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8dc8a8b345ee45d7b70552aa35076cc48383ce73d6e4bfaa42e36c0254df31bf", size = 113782733 },
+    { url = "https://files.pythonhosted.org/packages/0a/71/15e67635275e6cb576e40281d539d268abdae8c708ee49750ff29709dd81/chdb-2.1.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9edb828963275a804eb139b16a4d5641351fe36730a6cfcb4f0a6c6d08a07139", size = 140685019 },
+]
+
+[[package]]
 name = "h11"
 version = "0.14.0"
 source = { registry = "https://pypi.org/simple" }
@@ -97,6 +112,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "beautifulsoup4" },
+    { name = "chdb" },
     { name = "httpx" },
     { name = "rss-parser" },
 ]
@@ -109,6 +125,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.12.3" },
+    { name = "chdb", specifier = ">=2.1.1" },
     { name = "httpx", specifier = ">=0.27.2" },
     { name = "rss-parser", specifier = ">=2.1.0" },
 ]
