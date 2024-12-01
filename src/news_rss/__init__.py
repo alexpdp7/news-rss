@@ -52,7 +52,7 @@ def scrape(config):
 
 
 def scrape_google_news(google_news_urls):
-    for google_news_url in google_news_urls:
+    for google_news_url in tqdm.tqdm(google_news_urls):
         ts = datetime.datetime.now()
         rss = google.news_url_to_rss_url(google_news_url)
         rss = google.process_feed_url(rss)
